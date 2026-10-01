@@ -1,0 +1,64 @@
+/* Form fields + submit button */
+
+.form-row {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-bottom:14px;
+}
+
+.form-group {
+  margin-bottom:14px;
+}
+
+.form-group label {
+  display:block;
+  font-size:13px;
+  font-weight:500;
+  color:var(--text);
+  margin-bottom:6px;
+}
+
+.form-group input,.form-group select,.form-group textarea {
+  width:100%;
+  padding:11px 14px;
+  border:1.5px solid #C8D5F0;
+  border-radius:10px;
+  font-size:14px;
+  font-family:var(--font-body);
+  color:var(--dark);
+  outline:none;
+  transition:border-color 0.2s;
+  background:#fff;
+}
+
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus {
+  border-color:var(--blue);
+}
+
+.form-group textarea {
+  resize:vertical;
+  min-height:80px;
+}
+
+.submit-btn {
+  width:100%;
+  background:var(--blue);
+  color:#fff;
+  padding:14px;
+  border-radius:50px;
+  font-size:15px;
+  font-weight:500;
+  border:none;
+  cursor:pointer;
+  font-family:var(--font-body);
+  transition:background 0.2s;
+}
+
+.submit-btn:hover {
+  background:#122870;
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}

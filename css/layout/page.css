@@ -1,0 +1,3 @@
+/* Inner pages: first section must clear the fixed 72px nav */
+
+.page-first { padding-top: calc(72px + 64px); }

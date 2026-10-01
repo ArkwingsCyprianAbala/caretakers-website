@@ -1,0 +1,17 @@
+/* Design tokens: change the brand colours/fonts here and it updates everywhere */
+
+:root {
+  --blue: #1A3A8F;
+  --blue-mid: #4A72D1;
+  --blue-pale: #D6E4FF;
+  --wine: #6B0F2B;
+  --wine-light: #8C1A38;
+  --warm: #F4A261;
+  --warm-pale: #FFF3E8;
+  --bg: #F5F7FF;
+  --dark: #0D1B3E;
+  --text: #1E2A4A;
+  --muted: #5A6A8A;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+}

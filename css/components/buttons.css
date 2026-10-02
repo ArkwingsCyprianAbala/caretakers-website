@@ -1,38 +1,37 @@
 /* Primary / secondary buttons */
 
 .btn-primary {
-  background:var(--blue);
-  color:#fff;
-  padding:14px 28px;
-  border-radius:50px;
-  font-size:15px;
-  font-weight:500;
-  text-decoration:none;
-  transition:all 0.2s;
-  border:none;
-  cursor:pointer;
-  display:inline-block;
+  background: var(--blue);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .btn-primary:hover {
-  background:#122870;
-  transform:translateY(-2px);
+  background: #122870;
 }
 
 .btn-secondary {
-  background:transparent;
-  color:var(--blue);
-  padding:14px 28px;
-  border-radius:50px;
-  font-size:15px;
-  font-weight:500;
-  text-decoration:none;
-  border:1.5px solid var(--blue);
-  transition:all 0.2s;
-  cursor:pointer;
-  display:inline-block;
+  background: transparent;
+  color: var(--blue);
+  padding: 11px 24px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid var(--blue);
+  transition: background 0.2s;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .btn-secondary:hover {
-  background:var(--blue-pale);
+  background: var(--blue-pale);
 }

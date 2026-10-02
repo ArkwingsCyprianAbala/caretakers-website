@@ -1,3 +1,7 @@
 /* Inner pages: first section must clear the fixed 72px nav */
 
-.page-first { padding-top: calc(72px + 64px); }
+.page-first { padding-top: calc(72px + 40px); }
+
+@media (max-width: 900px) {
+  .page-first { padding-top: calc(72px + 32px); }
+}

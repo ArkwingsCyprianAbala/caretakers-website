@@ -1,12 +1,12 @@
 /* Global heading styles */
 
 h1 {
-  font-family:var(--font-heading);
-  font-size:50px;
-  line-height:1.15;
-  color:var(--dark);
-  margin-bottom:18px;
-  font-weight:700;
+  font-family: var(--font-heading);
+  font-size: 46px;
+  line-height: 1.12;
+  color: var(--dark);
+  margin-bottom: 14px;
+  font-weight: 700;
 }
 
 h1 em {

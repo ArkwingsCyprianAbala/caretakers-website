@@ -1,8 +1,32 @@
-/* HOME: closing call-to-action band (new section, not in the original) */
+/* HOME: closing call-to-action band */
 
-.cta-band { background: var(--blue); text-align: center; }
-.cta-band .section-title { color: #fff; }
-.cta-band .section-desc { color: rgba(255, 255, 255, 0.75); margin: 0 auto 28px; }
-.cta-band .btn-primary { background: #fff; color: var(--blue); }
-.cta-band .btn-primary:hover { background: var(--blue-pale); }
-.cta-band .section-tag { color: var(--blue-pale); }
+.cta-band {
+  background: var(--blue);
+  text-align: center;
+}
+
+.cta-band .section-inner {
+  max-width: 640px;
+}
+
+.cta-band .section-title {
+  color: #fff;
+}
+
+.cta-band .section-desc {
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0 auto 22px;
+}
+
+.cta-band .btn-primary {
+  background: #fff;
+  color: var(--blue);
+}
+
+.cta-band .btn-primary:hover {
+  background: var(--blue-pale);
+}
+
+.cta-band .section-tag {
+  color: var(--blue-pale);
+}

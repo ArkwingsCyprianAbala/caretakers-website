@@ -14,4 +14,7 @@
   --muted: #5A6A8A;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', sans-serif;
+  --shadow: 0 8px 24px rgba(13, 27, 62, 0.08);
+  --radius: 14px;
+  --content: 1100px;
 }

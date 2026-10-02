@@ -1,74 +1,74 @@
-/* =========================================
-   ABOUT: SCHOOL INTRO + VALUES
-   ========================================= */
+/* ABOUT: school intro + values */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
 
 .about-visual {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 220px 220px;
-  gap: 16px;
+  grid-template-rows: 190px 190px;
+  gap: 12px;
 }
 
-/* Image cards */
 .about-img-card {
   position: relative;
   width: 100%;
-  height: 220px;
-  border-radius: 20px;
+  height: 190px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--blue-pale);
 }
 
-/* Make images fill the cards perfectly */
 .about-img-card img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
-  border-radius: 20px;
+  border-radius: var(--radius);
+  transition: transform 0.4s ease;
 }
 
-/* First image is tall and spans both rows */
 .about-img-card.tall {
-  height: 456px;
+  height: 392px;
   grid-row: span 2;
 }
 
-/* Third image */
 .about-img-card.warm {
   background: var(--warm-pale);
-}
-
-/* Optional smooth hover effect */
-.about-img-card img {
-  transition: transform 0.4s ease;
 }
 
 .about-img-card:hover img {
   transform: scale(1.04);
 }
 
-
-/* =========================================
-   VALUES
-   ========================================= */
+.value-list {
+  margin-top: 24px;
+}
 
 .value-item {
   display: flex;
-  gap: 14px;
-  margin-bottom: 22px;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.value-item:last-child {
+  margin-bottom: 0;
 }
 
 .value-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: var(--blue-pale);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   flex-shrink: 0;
 }
 
@@ -80,79 +80,50 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--dark);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .value-text p {
   font-size: 14px;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.55;
 }
-
-.value-list {
-  margin-top: 34px;
-}
-
-
-/* =========================================
-   ABOUT GRID
-   ========================================= */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 70px;
-  align-items: center;
-}
-
-
-/* =========================================
-   TABLET
-   ========================================= */
 
 @media (max-width: 900px) {
-
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 
   .about-visual {
-    grid-template-rows: 200px 200px;
-  }
-
-  .about-img-card {
-    height: 200px;
-  }
-
-  .about-img-card.tall {
-    height: 416px;
-  }
-}
-
-
-/* =========================================
-   MOBILE
-   ========================================= */
-
-@media (max-width: 600px) {
-
-  .about-visual {
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px 180px;
-    gap: 12px;
   }
 
   .about-img-card {
     height: 180px;
-    border-radius: 14px;
   }
 
   .about-img-card.tall {
     height: 372px;
   }
+}
+
+@media (max-width: 600px) {
+  .about-visual {
+    grid-template-rows: 160px 160px;
+    gap: 10px;
+  }
+
+  .about-img-card {
+    height: 160px;
+    border-radius: 12px;
+  }
+
+  .about-img-card.tall {
+    height: 330px;
+  }
 
   .about-img-card img {
-    border-radius: 14px;
+    border-radius: 12px;
   }
 }

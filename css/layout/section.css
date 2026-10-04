@@ -34,6 +34,11 @@ section {
   font-weight: 400;
 }
 
+/* Alternate background to separate stacked sections */
+.section-alt {
+  background: var(--blue-pale);
+}
+
 @media (max-width: 900px) {
   section { padding: 48px 5%; }
   .section-title { font-size: 28px; }

@@ -98,18 +98,17 @@
   line-height: 1.5;
 }
 
-.contact-form {
-  background: #fff;
-  border-radius: 16px;
-  padding: 26px;
-  box-shadow: var(--shadow);
+/* Right column now holds two stacked forms */
+.contact-forms {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.contact-form h3 {
-  font-family: var(--font-heading);
-  font-size: 22px;
-  color: var(--dark);
-  margin-bottom: 18px;
+/* So #enrol and #tour anchors don't land under the sticky nav */
+#enrol,
+#tour {
+  scroll-margin-top: 90px;
 }
 
 @media (max-width: 900px) {

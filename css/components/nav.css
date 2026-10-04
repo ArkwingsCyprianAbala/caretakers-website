@@ -31,10 +31,9 @@ nav {
 }
 
 .logo-wrap img {
-  height: 48px;
-  width: 48px;
+  height: 62px;
+  width: 62px;
   object-fit: contain;
-  border-radius: 6px;
   flex-shrink: 0;
 }
 
@@ -133,4 +132,16 @@ nav {
 
 @media (max-width: 600px) {
   .nav-cta { display: none; }
+}
+
+/* Fixed nav is 72px tall: keep anchor targets (#about, #why, #enquiry, #enrol, #tour)
+   from landing underneath it, and scroll smoothly for users who allow motion. */
+html {
+  scroll-padding-top: 88px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

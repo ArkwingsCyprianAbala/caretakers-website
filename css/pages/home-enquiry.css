@@ -1,0 +1,31 @@
+/* HOME: enquiry section (intro text + form card) */
+
+.enquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.enquiry-alt {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.enquiry-alt a {
+  color: var(--blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.enquiry-alt a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .enquiry-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

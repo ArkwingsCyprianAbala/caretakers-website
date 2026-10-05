@@ -43,64 +43,66 @@
 <main>
 <section id="contact" class="contact page-first">
   <div class="section-inner">
-    <p class="section-tag">Get In Touch</p>
-    <h1 class="section-title">Begin Your Child's Journey</h1>
-    <p class="section-desc">We'd love to welcome your family. Apply for enrolment or book a free school tour below.</p>
     <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-photo">
           <img src="images/Photo 9.jpg" alt="Children at Caretakers' Center of Excellence campus in Kihunguro, Kikuyu">
         </div>
-        <h3>Find & Reach Us</h3>
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div class="contact-detail">
-            <h5>Location</h5>
-            <p>Kihunguro, Kikuyu Town<br>Nairobi County, Kenya</p>
+        <div class="contact-forms">
+
+          <form class="form-card" id="tour-form" novalidate>
+          <h3 id="tour">Book a School Tour</h3>
+          <p class="form-intro">Tours run on weekday mornings. Choose a date and time that suits you.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tour-parent">Your name</label>
+              <input type="text" id="tour-parent" name="parent_name" placeholder="Your full name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="tour-phone">Phone number</label>
+              <input type="tel" id="tour-phone" name="phone" placeholder="+254 ..." autocomplete="tel" required>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📞</div>
-          <div class="contact-detail">
-            <h5>Call / WhatsApp</h5>
-            <a href="tel:+254110700944">+254 110 700 944</a>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="tour-date">Preferred date</label>
+              <input type="date" id="tour-date" name="tour_date" required>
+            </div>
+            <div class="form-group">
+              <label for="tour-time">Preferred time</label>
+              <select id="tour-time" name="tour_time" required>
+                <option value="">Select time</option>
+                <option>8:30 AM – 10:00 AM</option>
+                <option>10:00 AM – 11:30 AM</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-detail">
-            <h5>Email</h5>
-            <a href="mailto:caretakerskindergarten@gmail.com">caretakerskindergarten@gmail.com</a>
+          <div class="form-group">
+            <label for="tour-visitors">Number of visitors</label>
+            <select id="tour-visitors" name="visitors" required>
+              <option value="">Select number</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4 or more</option>
+            </select>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📘</div>
-          <div class="contact-detail">
-            <h5>Facebook</h5>
-            <a href="https://www.facebook.com/caretakers-center-of-excellence" target="_blank">caretakers-center-of-excellence</a>
+          <div class="hp-field" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📸</div>
-          <div class="contact-detail">
-            <h5>Instagram</h5>
-            <a href="https://www.instagram.com/caretakerscenterofexcellence" target="_blank">@caretakerscenterofexcellence</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
-          <div class="contact-detail">
-            <h5>School Hours</h5>
-            <p>Monday – Friday: 7:30 AM – 4:00 PM</p>
-          </div>
-        </div>
-        <div class="tour-box">
-          <p>School Tours Available</p>
-          <p>Book a free tour any weekday morning and see Montessori in action at our Kikuyu campus. Use the tour form to pick a date and time.</p>
+          <button type="submit" class="submit-btn">Book tour</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+          
         </div>
       </div>
 
       <div class="contact-forms">
+        <div class="section-inner">
+          <p class="section-tag">Get In Touch</p>
+          <h1 class="section-title">Begin Your Child's Journey</h1>
+          <p class="section-desc">We'd love to welcome your family. Apply for enrolment or book a free school tour below.</p>
+        </div>
 
         <form class="form-card" id="enrol-form" novalidate>
           <h3 id="enrol">Enrolment Form</h3>
@@ -143,50 +145,6 @@
             <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
           </div>
           <button type="submit" class="submit-btn">Submit enrolment</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-
-        <form class="form-card" id="tour-form" novalidate>
-          <h3 id="tour">Book a School Tour</h3>
-          <p class="form-intro">Tours run on weekday mornings. Choose a date and time that suits you.</p>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="tour-parent">Your name</label>
-              <input type="text" id="tour-parent" name="parent_name" placeholder="Your full name" autocomplete="name" required>
-            </div>
-            <div class="form-group">
-              <label for="tour-phone">Phone number</label>
-              <input type="tel" id="tour-phone" name="phone" placeholder="+254 ..." autocomplete="tel" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="tour-date">Preferred date</label>
-              <input type="date" id="tour-date" name="tour_date" required>
-            </div>
-            <div class="form-group">
-              <label for="tour-time">Preferred time</label>
-              <select id="tour-time" name="tour_time" required>
-                <option value="">Select time</option>
-                <option>8:30 AM – 10:00 AM</option>
-                <option>10:00 AM – 11:30 AM</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="tour-visitors">Number of visitors</label>
-            <select id="tour-visitors" name="visitors" required>
-              <option value="">Select number</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4 or more</option>
-            </select>
-          </div>
-          <div class="hp-field" aria-hidden="true">
-            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
-          </div>
-          <button type="submit" class="submit-btn">Book tour</button>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
 

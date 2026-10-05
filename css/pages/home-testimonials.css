@@ -2,67 +2,83 @@
 
 .testimonials {
   background: var(--wine);
+  padding: clamp(20px, 5vw, 60px) clamp(16px, 4vw, 40px);
 }
 
 .testimonials .section-title {
   color: #fff;
+  font-size: clamp(24px, 6vw, 42px);
 }
 
 .testimonials .section-tag {
   color: #E8A0B0;
+  font-size: clamp(12px, 2.5vw, 14px);
 }
 
 .testimonials .section-desc {
   color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(14px, 2vw, 16px);
+  max-width: 100%;
 }
 
 .testi-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(12px, 3vw, 20px);
+  margin-top: clamp(20px, 5vw, 32px);
 }
 
 .testi-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: clamp(16px, 4vw, 24px);
   display: flex;
   flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.testi-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .stars {
   color: var(--warm);
-  font-size: 13px;
-  margin-bottom: 10px;
+  font-size: clamp(12px, 2vw, 14px);
+  margin-bottom: clamp(8px, 2vw, 12px);
   letter-spacing: 1.5px;
 }
 
 .testi-quote {
-  font-size: 14px;
+  font-size: clamp(13px, 1.8vw, 15px);
   color: rgba(255, 255, 255, 0.88);
-  line-height: 1.65;
+  line-height: 1.6;
   font-style: italic;
-  margin-bottom: 16px;
+  margin-bottom: clamp(12px, 3vw, 18px);
   flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .testi-author {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(8px, 2vw, 12px);
+  margin-top: auto;
 }
 
 .testi-avatar {
-  width: 36px;
-  height: 36px;
+  width: clamp(32px, 8vw, 42px);
+  height: clamp(32px, 8vw, 42px);
+  min-width: clamp(32px, 8vw, 42px);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.16);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: clamp(12px, 2vw, 16px);
   font-weight: 700;
   color: #fff;
   font-family: var(--font-heading);
@@ -70,20 +86,56 @@
 }
 
 .testi-name {
-  font-size: 13px;
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 500;
   color: #fff;
+  word-break: break-word;
 }
 
 .testi-role {
-  font-size: 12px;
+  font-size: clamp(11px, 1.8vw, 13px);
   color: rgba(255, 255, 255, 0.5);
+  word-break: break-word;
 }
 
-@media (max-width: 900px) {
-  .testi-grid { grid-template-columns: 1fr 1fr; }
+/* Tablet and larger */
+@media (min-width: 601px) and (max-width: 900px) {
+  .testi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
 }
 
-@media (max-width: 600px) {
-  .testi-grid { grid-template-columns: 1fr; }
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .testimonials {
+    padding: clamp(16px, 4vw, 24px) clamp(12px, 3vw, 20px);
+  }
+
+  .testi-quote {
+    line-height: 1.5;
+  }
+
+  .testi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(10px, 2.5vw, 14px);
+  }
+}
+
+/* Large desktop and ultra-wide */
+@media (min-width: 1400px) {
+  .testi-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+}
+
+@media print {
+  .testi-card {
+    page-break-inside: avoid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testi-card {
+    transition: none;
+  }
 }

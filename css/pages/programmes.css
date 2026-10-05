@@ -2,6 +2,7 @@
 
 .programs {
   background: var(--blue-pale);
+  width: 100%;
 }
 
 .program-grid {
@@ -9,13 +10,14 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 28px;
+  width: 100%;
 }
 
 .program-card {
   background: #fff;
   border-radius: 16px;
   padding: 0 18px 18px;
-  border: 1px solid rgba(26, 58, 143, 0.08);
+  border: 2px solid var(--blue);
   transition: box-shadow 0.2s;
   position: relative;
   overflow: hidden;
@@ -29,12 +31,15 @@
   margin: 0 -18px 14px;
   height: 132px;
   overflow: hidden;
+  width: 100%;
 }
 
 .program-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .prog-icon {
@@ -106,14 +111,387 @@
 }
 
 .program-card.featured {
-  border: 2px solid var(--blue-mid);
+  border: 2px solid var(--blue);
 }
 
-@media (max-width: 900px) {
-  .program-grid { grid-template-columns: 1fr 1fr; }
+/* Call-to-Action Section */
+.programs-cta {
+  text-align: center;
+  margin-top: 40px;
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  width: 100%;
 }
 
+.programs-cta h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-family: var(--font-heading);
+}
+
+.programs-cta p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.btn-large {
+  padding: 12px 36px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 25px;
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1a3a8f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 58, 143, 0.25);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Desktop - 4 Columns */
+@media (min-width: 1200px) {
+  .program-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .program-photo {
+    height: 140px;
+  }
+}
+
+/* Laptop - 3 Columns */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .program-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .program-photo {
+    height: 135px;
+  }
+
+  .program-card h3 {
+    font-size: 16px;
+  }
+
+  .program-card p {
+    font-size: 12px;
+  }
+}
+
+/* Large Tablet - 2 Columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .program-photo {
+    height: 130px;
+  }
+
+  .program-card {
+    padding: 0 16px 16px;
+  }
+
+  .program-photo {
+    margin: 0 -16px 12px;
+  }
+
+  .program-card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .program-card p {
+    font-size: 12px;
+  }
+
+  .prog-age {
+    font-size: 9px;
+    margin-bottom: 6px;
+  }
+
+  .prog-features li {
+    font-size: 11px;
+    padding: 4px 0;
+  }
+
+  .programs-cta {
+    margin-top: 32px;
+  }
+
+  .programs-cta h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .programs-cta p {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .btn-large {
+    padding: 11px 32px;
+    font-size: 14px;
+  }
+}
+
+/* Tablet - 2 Columns */
+@media (min-width: 601px) and (max-width: 767px) {
+  .program-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .program-photo {
+    height: 120px;
+  }
+
+  .program-card {
+    padding: 0 14px 14px;
+  }
+
+  .program-photo {
+    margin: 0 -14px 10px;
+  }
+
+  .program-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .program-card p {
+    font-size: 11px;
+  }
+
+  .prog-age {
+    font-size: 8px;
+    padding: 2px 8px;
+    margin-bottom: 5px;
+  }
+
+  .prog-features li {
+    font-size: 10px;
+    padding: 3px 0;
+  }
+
+  .programs-cta {
+    margin-top: 28px;
+  }
+
+  .programs-cta h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .programs-cta p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btn-large {
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile - 1 Column */
 @media (max-width: 600px) {
-  .program-grid { grid-template-columns: 1fr; }
-  .program-photo { height: 160px; }
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .program-photo {
+    height: 160px;
+  }
+
+  .program-card {
+    padding: 0 14px 14px;
+  }
+
+  .program-photo {
+    margin: 0 -14px 10px;
+  }
+
+  .program-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .program-card p {
+    font-size: 11px;
+  }
+
+  .prog-age {
+    font-size: 8px;
+    padding: 2px 8px;
+    margin-bottom: 5px;
+  }
+
+  .prog-features li {
+    font-size: 10px;
+    padding: 3px 0;
+  }
+
+  .programs-cta {
+    margin-top: 24px;
+  }
+
+  .programs-cta h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .programs-cta p {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .btn-large {
+    padding: 10px 28px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .program-photo {
+    height: 140px;
+  }
+
+  .program-card {
+    padding: 0 12px 12px;
+  }
+
+  .program-photo {
+    margin: 0 -12px 8px;
+  }
+
+  .program-card h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .program-card p {
+    font-size: 10px;
+  }
+
+  .prog-age {
+    font-size: 7px;
+    padding: 2px 6px;
+    margin-bottom: 4px;
+  }
+
+  .prog-features li {
+    font-size: 9px;
+    padding: 2px 0;
+  }
+
+  .programs-cta {
+    margin-top: 20px;
+  }
+
+  .programs-cta h2 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .programs-cta p {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .btn-large {
+    padding: 9px 24px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Mobile / Watch */
+@media (max-width: 360px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .program-photo {
+    height: 120px;
+  }
+
+  .program-card {
+    padding: 0 10px 10px;
+  }
+
+  .program-photo {
+    margin: 0 -10px 6px;
+  }
+
+  .program-card h3 {
+    font-size: 13px;
+    margin-bottom: 2px;
+  }
+
+  .program-card p {
+    font-size: 9px;
+  }
+
+  .prog-age {
+    font-size: 6px;
+    padding: 1px 4px;
+    margin-bottom: 3px;
+  }
+
+  .prog-features li {
+    font-size: 8px;
+    padding: 2px 0;
+  }
+
+  .programs-cta {
+    margin-top: 16px;
+  }
+
+  .programs-cta h2 {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .programs-cta p {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .btn-large {
+    padding: 8px 20px;
+    font-size: 11px;
+  }
 }

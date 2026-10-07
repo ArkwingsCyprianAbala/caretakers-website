@@ -1,7 +1,7 @@
 /* Site footer */
 
 footer {
-  background: transparent;
+  background: var(--wine-light);
   padding: 40px 5% 22px;
 }
 

@@ -30,18 +30,19 @@ if (tourDate) {
 }
 
 // Forms. Each form is separate (own ID, fields, endpoint, message).
-// Replace each endpoint with a real Formspree (or similar) URL before launch.
+const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+
 const FORMS = {
   'enquiry-form': {
-    endpoint: 'https://formspree.io/f/REPLACE_ENQUIRY_ID',
+    endpoint: WEB3FORMS_URL,
     success: 'Thank you! Your enquiry has been received. We will get back to you shortly.'
   },
   'enrol-form': {
-    endpoint: 'https://formspree.io/f/REPLACE_ENROL_ID',
+    endpoint: WEB3FORMS_URL,
     success: 'Thank you! Your enrolment request has been received. We will contact you shortly.'
   },
   'tour-form': {
-    endpoint: 'https://formspree.io/f/REPLACE_TOUR_ID',
+    endpoint: WEB3FORMS_URL,
     success: 'Your tour request has been received. We will confirm the date and time with you.'
   }
 };
@@ -74,7 +75,8 @@ Object.entries(FORMS).forEach(([id, config]) => {
         body: new FormData(form),
         headers: { Accept: 'application/json' }
       });
-      if (!res.ok) throw new Error('Request failed');
+      const result = await res.json();
+      if (!res.ok || !result.success) throw new Error('Request failed');
       form.reset();
       show(config.success, true);
     } catch (err) {

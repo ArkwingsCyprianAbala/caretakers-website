@@ -173,7 +173,7 @@
         <p class="section-desc">Want to know about fees, term dates or which programme suits your child? Send us a message and we will reply as soon as we can.</p>
         <p class="enquiry-alt">Prefer to talk? Call or WhatsApp <a href="tel:+254110700944">+254 110 700 944</a>.</p>
       </div>
-      <form class="form-card" id="enquiry-form" novalidate>
+      <form class="form-card" id="enquiry-form" action="https://api.web3forms.com/submit" method="POST"novalidate>
         <h3>Send an Enquiry</h3>
         <p class="form-intro">We usually reply within one working day.</p>
         <div class="form-row">
@@ -194,8 +194,11 @@
           <label for="enquiry-message">Your question</label>
           <textarea id="enquiry-message" name="message" placeholder="How can we help?" required></textarea>
         </div>
+        <input type="hidden" name="access_key" value="2067acbd-864c-4d5e-9318-bc15df3e7795">
+        <input type="hidden" name="subject" value="New enquiry from the CCE website">
+        <input type="hidden" name="from_name" value="CCE Website">
         <div class="hp-field" aria-hidden="true">
-            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+            <label>Leave this field empty <input type="text" name="botcheck" tabindex="-1" autocomplete="off"></label>
           </div>
         <button type="submit" class="submit-btn">Send enquiry</button>
         <p class="form-status" role="status" aria-live="polite"></p>

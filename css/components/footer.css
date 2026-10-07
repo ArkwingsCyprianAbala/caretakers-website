@@ -1,7 +1,7 @@
 /* Site footer */
 
 footer {
-  background: var(--wine-light);
+  background: transparent;
   padding: 40px 5% 22px;
 }
 
@@ -29,8 +29,8 @@ footer {
   width: 44px;
   object-fit: contain;
   border-radius: 6px;
-  background: #fff;
-  padding: 3px;
+  background: transparent;
+  padding: 0;
   filter: none;
   opacity: 1;
 }

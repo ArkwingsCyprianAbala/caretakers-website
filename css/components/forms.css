@@ -50,7 +50,7 @@
 }
 
 .submit-btn {
-  width: 100%;
+  width: 50%;
   background: var(--blue);
   color: #fff;
   padding: 12px;
@@ -62,19 +62,18 @@
   font-family: var(--font-body);
   transition: background 0.2s;
   margin-top: 4px;
+  align-self: center;
 }
 
 .submit-btn:hover {
   background: #122870;
 }
 
-/* Disabled state while a form is sending */
 .submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-/* Success / error message under each form */
 .form-status {
   margin-top: 12px;
   font-size: 14px;
@@ -112,13 +111,11 @@
   overflow: hidden;
 }
 
-/* Keyboard users still get a visible focus ring on the button */
 .submit-btn:focus-visible {
   outline: 3px solid #C8D5F0;
   outline-offset: 2px;
 }
 
-/* Shared form card (homepage enquiry, contact page enrolment + tour) */
 .form-card {
   background: #fff;
   border-radius: 16px;

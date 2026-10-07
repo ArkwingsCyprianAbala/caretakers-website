@@ -1,4 +1,6 @@
-/* PROGRAMMES: programme cards */
+/* =========================================================
+   PROGRAMMES: PROGRAMME CARDS
+========================================================= */
 
 .programs {
   background: var(--blue-pale);
@@ -43,7 +45,7 @@
 }
 
 .prog-icon {
-  font-size: 22px;
+  font-size: clamp(22px, 1.2vw, 32px);
   margin-bottom: 8px;
   display: block;
 }
@@ -54,7 +56,7 @@
   color: var(--blue);
   padding: 3px 10px;
   border-radius: 50px;
-  font-size: 10px;
+  font-size: clamp(10px, 0.65vw, 15px);
   font-weight: 500;
   margin-bottom: 8px;
   letter-spacing: 0.4px;
@@ -62,13 +64,13 @@
 
 .program-card h3 {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: clamp(18px, 1vw, 26px);
   color: var(--dark);
   margin-bottom: 6px;
 }
 
 .program-card p {
-  font-size: 13px;
+  font-size: clamp(13px, 0.85vw, 20px);
   color: var(--muted);
   line-height: 1.55;
 }
@@ -79,7 +81,7 @@
 }
 
 .prog-features li {
-  font-size: 12px;
+  font-size: clamp(12px, 0.75vw, 18px);
   color: var(--text);
   padding: 5px 0;
   border-top: 1px solid var(--blue-pale);
@@ -92,7 +94,7 @@
   content: '✓';
   color: var(--blue);
   font-weight: 600;
-  font-size: 11px;
+  font-size: clamp(11px, 0.7vw, 17px);
 }
 
 .popular-badge {
@@ -102,7 +104,7 @@
   transform: translateX(-50%);
   background: var(--blue);
   color: #fff;
-  font-size: 10px;
+  font-size: clamp(10px, 0.65vw, 15px);
   padding: 3px 12px;
   border-radius: 50px;
   font-weight: 500;
@@ -114,7 +116,8 @@
   border: 2px solid var(--blue);
 }
 
-/* Call-to-Action Section */
+
+
 .programs-cta {
   text-align: center;
   margin-top: 40px;
@@ -125,7 +128,7 @@
 }
 
 .programs-cta h2 {
-  font-size: 24px;
+  font-size: clamp(24px, 1.3vw, 34px);
   font-weight: 600;
   margin-bottom: 8px;
   color: var(--dark);
@@ -133,7 +136,7 @@
 }
 
 .programs-cta p {
-  font-size: 14px;
+  font-size: clamp(14px, 0.9vw, 21px);
   color: var(--muted);
   margin-bottom: 16px;
   line-height: 1.6;
@@ -141,7 +144,7 @@
 
 .btn-large {
   padding: 12px 36px;
-  font-size: 15px;
+  font-size: clamp(15px, 0.85vw, 20px);
   font-weight: 500;
   border-radius: 25px;
   display: inline-block;
@@ -166,8 +169,9 @@
   transform: translateY(0);
 }
 
-/* Desktop - 4 Columns */
+
 @media (min-width: 1200px) {
+
   .program-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
@@ -176,10 +180,53 @@
   .program-photo {
     height: 140px;
   }
+
+  .prog-icon {
+    font-size: 26px;
+  }
+
+  .prog-age {
+    font-size: 11px;
+  }
+
+  .program-card h3 {
+    font-size: 20px;
+  }
+
+  .program-card p {
+    font-size: 15px;
+  }
+
+  .prog-features li {
+    font-size: 13px;
+  }
+
+  .prog-features li::before {
+    font-size: 12px;
+  }
+
+  .popular-badge {
+    font-size: 11px;
+  }
+
+  .programs-cta h2 {
+    font-size: 26px;
+  }
+
+  .programs-cta p {
+    font-size: 15px;
+  }
+
+  .btn-large {
+    font-size: 16px;
+  }
 }
 
-/* Laptop - 3 Columns */
+
+
+
 @media (min-width: 1024px) and (max-width: 1199px) {
+
   .program-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
@@ -189,17 +236,47 @@
     height: 135px;
   }
 
+  .prog-icon {
+    font-size: 24px;
+  }
+
+  .prog-age {
+    font-size: 10px;
+  }
+
   .program-card h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .program-card p {
+    font-size: 14px;
+  }
+
+  .prog-features li {
     font-size: 12px;
+  }
+
+  .popular-badge {
+    font-size: 10px;
+  }
+
+  .programs-cta h2 {
+    font-size: 24px;
+  }
+
+  .programs-cta p {
+    font-size: 14px;
+  }
+
+  .btn-large {
+    font-size: 15px;
   }
 }
 
-/* Large Tablet - 2 Columns */
+
+
 @media (min-width: 768px) and (max-width: 1023px) {
+
   .program-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
@@ -217,23 +294,35 @@
     margin: 0 -16px 12px;
   }
 
+  .prog-icon {
+    font-size: 22px;
+  }
+
   .program-card h3 {
-    font-size: 16px;
+    font-size: 17px;
     margin-bottom: 5px;
   }
 
   .program-card p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .prog-age {
-    font-size: 9px;
+    font-size: 10px;
     margin-bottom: 6px;
   }
 
   .prog-features li {
     font-size: 11px;
     padding: 4px 0;
+  }
+
+  .prog-features li::before {
+    font-size: 11px;
+  }
+
+  .popular-badge {
+    font-size: 10px;
   }
 
   .programs-cta {
@@ -256,8 +345,10 @@
   }
 }
 
-/* Tablet - 2 Columns */
+
+
 @media (min-width: 601px) and (max-width: 767px) {
+
   .program-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -276,17 +367,21 @@
     margin: 0 -14px 10px;
   }
 
+  .prog-icon {
+    font-size: 20px;
+  }
+
   .program-card h3 {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 
   .program-card p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .prog-age {
-    font-size: 8px;
+    font-size: 9px;
     padding: 2px 8px;
     margin-bottom: 5px;
   }
@@ -294,6 +389,14 @@
   .prog-features li {
     font-size: 10px;
     padding: 3px 0;
+  }
+
+  .prog-features li::before {
+    font-size: 10px;
+  }
+
+  .popular-badge {
+    font-size: 9px;
   }
 
   .programs-cta {
@@ -316,8 +419,11 @@
   }
 }
 
-/* Mobile - 1 Column */
-@media (max-width: 600px) {
+
+
+
+@media (min-width: 481px) and (max-width: 600px) {
+
   .program-grid {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -336,17 +442,21 @@
     margin: 0 -14px 10px;
   }
 
+  .prog-icon {
+    font-size: 20px;
+  }
+
   .program-card h3 {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 4px;
   }
 
   .program-card p {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .prog-age {
-    font-size: 8px;
+    font-size: 9px;
     padding: 2px 8px;
     margin-bottom: 5px;
   }
@@ -356,12 +466,16 @@
     padding: 3px 0;
   }
 
+  .popular-badge {
+    font-size: 9px;
+  }
+
   .programs-cta {
     margin-top: 24px;
   }
 
   .programs-cta h2 {
-    font-size: 18px;
+    font-size: 19px;
     margin-bottom: 5px;
   }
 
@@ -376,8 +490,11 @@
   }
 }
 
-/* Small Mobile */
+
+
+
 @media (max-width: 480px) {
+
   .program-grid {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -396,24 +513,36 @@
     margin: 0 -12px 8px;
   }
 
+  .prog-icon {
+    font-size: 19px;
+  }
+
   .program-card h3 {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 3px;
   }
 
   .program-card p {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   .prog-age {
-    font-size: 7px;
+    font-size: 8px;
     padding: 2px 6px;
     margin-bottom: 4px;
   }
 
   .prog-features li {
-    font-size: 9px;
+    font-size: 10px;
     padding: 2px 0;
+  }
+
+  .prog-features li::before {
+    font-size: 9px;
+  }
+
+  .popular-badge {
+    font-size: 8px;
   }
 
   .programs-cta {
@@ -421,7 +550,7 @@
   }
 
   .programs-cta h2 {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 4px;
   }
 
@@ -436,8 +565,13 @@
   }
 }
 
-/* Extra Small Mobile / Watch */
+
+/* =========================================================
+   EXTRA SMALL - 360px AND BELOW
+========================================================= */
+
 @media (max-width: 360px) {
+
   .program-grid {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -456,24 +590,36 @@
     margin: 0 -10px 6px;
   }
 
+  .prog-icon {
+    font-size: 18px;
+  }
+
   .program-card h3 {
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 2px;
   }
 
   .program-card p {
-    font-size: 9px;
+    font-size: 10px;
   }
 
   .prog-age {
-    font-size: 6px;
+    font-size: 7px;
     padding: 1px 4px;
     margin-bottom: 3px;
   }
 
   .prog-features li {
-    font-size: 8px;
+    font-size: 9px;
     padding: 2px 0;
+  }
+
+  .prog-features li::before {
+    font-size: 8px;
+  }
+
+  .popular-badge {
+    font-size: 7px;
   }
 
   .programs-cta {
@@ -481,7 +627,7 @@
   }
 
   .programs-cta h2 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 3px;
   }
 
@@ -493,5 +639,188 @@
   .btn-large {
     padding: 8px 20px;
     font-size: 11px;
+  }
+}
+
+
+
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .prog-icon {
+    font-size: 28px;
+  }
+
+  .prog-age {
+    font-size: 12px;
+  }
+
+  .program-card h3 {
+    font-size: 22px;
+  }
+
+  .program-card p {
+    font-size: 17px;
+  }
+
+  .prog-features li {
+    font-size: 15px;
+  }
+
+  .prog-features li::before {
+    font-size: 14px;
+  }
+
+  .popular-badge {
+    font-size: 12px;
+  }
+
+  .programs-cta h2 {
+    font-size: 30px;
+  }
+
+  .programs-cta p {
+    font-size: 17px;
+  }
+
+  .btn-large {
+    font-size: 17px;
+  }
+}
+
+
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+
+  .prog-icon {
+    font-size: 32px;
+  }
+
+  .prog-age {
+    font-size: 14px;
+  }
+
+  .program-card h3 {
+    font-size: 26px;
+  }
+
+  .program-card p {
+    font-size: 20px;
+  }
+
+  .prog-features li {
+    font-size: 18px;
+  }
+
+  .prog-features li::before {
+    font-size: 17px;
+  }
+
+  .popular-badge {
+    font-size: 14px;
+  }
+
+  .programs-cta h2 {
+    font-size: 34px;
+  }
+
+  .programs-cta p {
+    font-size: 21px;
+  }
+
+  .btn-large {
+    font-size: 20px;
+  }
+}
+
+
+
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+
+  .prog-icon {
+    font-size: 38px;
+  }
+
+  .prog-age {
+    font-size: 16px;
+  }
+
+  .program-card h3 {
+    font-size: 30px;
+  }
+
+  .program-card p {
+    font-size: 24px;
+  }
+
+  .prog-features li {
+    font-size: 21px;
+  }
+
+  .prog-features li::before {
+    font-size: 20px;
+  }
+
+  .popular-badge {
+    font-size: 16px;
+  }
+
+  .programs-cta h2 {
+    font-size: 40px;
+  }
+
+  .programs-cta p {
+    font-size: 24px;
+  }
+
+  .btn-large {
+    font-size: 23px;
+  }
+}
+
+
+
+
+@media (min-width: 3840px) {
+
+  .prog-icon {
+    font-size: 44px;
+  }
+
+  .prog-age {
+    font-size: 18px;
+  }
+
+  .program-card h3 {
+    font-size: 34px;
+  }
+
+  .program-card p {
+    font-size: 28px;
+  }
+
+  .prog-features li {
+    font-size: 24px;
+  }
+
+  .prog-features li::before {
+    font-size: 23px;
+  }
+
+  .popular-badge {
+    font-size: 18px;
+  }
+
+  .programs-cta h2 {
+    font-size: 44px;
+  }
+
+  .programs-cta p {
+    font-size: 28px;
+  }
+
+  .btn-large {
+    font-size: 26px;
   }
 }

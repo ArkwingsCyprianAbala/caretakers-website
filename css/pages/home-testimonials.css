@@ -5,6 +5,15 @@
   padding: clamp(20px, 5vw, 60px) clamp(16px, 4vw, 40px);
 }
 
+
+.testimonials > * {
+  width: 100%;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 .testimonials .section-title {
   color: #fff;
   font-size: clamp(24px, 6vw, 42px);
@@ -98,20 +107,57 @@
   word-break: break-word;
 }
 
-/* Tablet and larger */
+
+
+
 @media (min-width: 601px) and (max-width: 900px) {
+
   .testi-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
+
+  .testimonials .section-title {
+    font-size: 36px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 15px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 17px;
+  }
+
+  .testi-quote {
+    font-size: 16px;
+  }
+
+  .testi-name {
+    font-size: 15px;
+  }
+
+  .testi-role {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 15px;
+  }
+
+  .testi-avatar {
+    font-size: 14px;
+  }
 }
 
-/* Small mobile devices */
+
 @media (max-width: 360px) {
+
   .testimonials {
     padding: clamp(16px, 4vw, 24px) clamp(12px, 3vw, 20px);
   }
 
   .testi-quote {
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -121,18 +167,219 @@
   }
 }
 
-/* Large desktop and ultra-wide */
-@media (min-width: 1400px) {
-  .testi-grid {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+
+
+@media (min-width: 901px) and (max-width: 1439px) {
+
+  .testimonials .section-title {
+    font-size: 46px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 16px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 18px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .testi-quote {
+    font-size: 18px;
+  }
+
+  .testi-name {
+    font-size: 16px;
+  }
+
+  .testi-role {
+    font-size: 15px;
+  }
+
+  .testi-avatar {
+    font-size: 16px;
   }
 }
+
+
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .testimonials > * {
+    max-width: 1750px;
+  }
+
+  .testimonials .section-title {
+    font-size: 54px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 18px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 21px;
+  }
+
+  .stars {
+    font-size: 18px;
+  }
+
+  .testi-quote {
+    font-size: 21px;
+  }
+
+  .testi-name {
+    font-size: 18px;
+  }
+
+  .testi-role {
+    font-size: 16px;
+  }
+
+  .testi-avatar {
+    font-size: 18px;
+  }
+}
+
+
+
+
+@media (min-width: 1920px) and (max-width: 2559px) {
+
+  .testimonials > * {
+    max-width: 1900px;
+  }
+
+  .testimonials .section-title {
+    font-size: 64px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 21px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 25px;
+  }
+
+  .stars {
+    font-size: 21px;
+  }
+
+  .testi-quote {
+    font-size: 25px;
+  }
+
+  .testi-name {
+    font-size: 21px;
+  }
+
+  .testi-role {
+    font-size: 19px;
+  }
+
+  .testi-avatar {
+    font-size: 21px;
+  }
+}
+
+
+
+
+@media (min-width: 2560px) and (max-width: 3839px) {
+
+  .testimonials > * {
+    max-width: 2150px;
+  }
+
+  .testimonials .section-title {
+    font-size: 76px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 25px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 29px;
+  }
+
+  .stars {
+    font-size: 25px;
+  }
+
+  .testi-quote {
+    font-size: 30px;
+  }
+
+  .testi-name {
+    font-size: 25px;
+  }
+
+  .testi-role {
+    font-size: 22px;
+  }
+
+  .testi-avatar {
+    font-size: 25px;
+  }
+}
+
+
+@media (min-width: 3840px) {
+
+  .testimonials > * {
+    max-width: 2500px;
+  }
+
+  .testimonials .section-title {
+    font-size: 90px;
+  }
+
+  .testimonials .section-tag {
+    font-size: 30px;
+  }
+
+  .testimonials .section-desc {
+    font-size: 34px;
+  }
+
+  .stars {
+    font-size: 30px;
+  }
+
+  .testi-quote {
+    font-size: 36px;
+  }
+
+  .testi-name {
+    font-size: 30px;
+  }
+
+  .testi-role {
+    font-size: 27px;
+  }
+
+  .testi-avatar {
+    font-size: 30px;
+  }
+}
+
+
+
 
 @media print {
   .testi-card {
     page-break-inside: avoid;
   }
 }
+
+
 
 @media (prefers-reduced-motion: reduce) {
   .testi-card {

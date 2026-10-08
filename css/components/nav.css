@@ -40,7 +40,7 @@ nav {
 .logo-text strong {
   display: block;
   font-family: var(--font-heading);
-  font-size: 15px;
+  font-size: 18px;
   color: var(--blue);
   font-weight: 700;
   line-height: 1.2;
@@ -48,7 +48,7 @@ nav {
 
 .logo-text span {
   display: block;
-  font-size: 10px;
+  font-size: 11px;
   color: var(--wine);
   letter-spacing: 0.8px;
   text-transform: uppercase;
@@ -59,16 +59,16 @@ nav {
 
 .nav-links {
   display: flex;
-  gap: 22px;
+  gap: 26px;
   list-style: none;
   margin-left: auto;
 }
 
 .nav-links a {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text);
-  font-weight: 400;
+  font-weight: 500;
   transition: color 0.2s;
   padding: 4px 0;
 }
@@ -80,10 +80,10 @@ nav {
 .nav-cta {
   background: var(--blue);
   color: #fff;
-  padding: 8px 18px;
+  padding: 10px 20px;
   border-radius: 50px;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
   transition: background 0.2s;
   white-space: nowrap;

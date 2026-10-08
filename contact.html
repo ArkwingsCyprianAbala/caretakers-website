@@ -53,11 +53,44 @@
           </div>
         </div>
 
+        <ul class="contact-meta">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+            </span>
+            <div class="contact-detail">
+              <h5>Campus</h5>
+              <p>Kihunguro, Kikuyu Town<br>Nairobi County</p>
+            </div>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5.2 4.8h3.1l1.4 3.5-1.8 1.1a12.6 12.6 0 0 0 6.7 6.7l1.1-1.8 3.5 1.4v3.1c0 .7-.6 1.3-1.3 1.3C10.4 20.1 3.9 13.6 3.9 6.1c0-.7.6-1.3 1.3-1.3z"/></svg>
+            </span>
+            <div class="contact-detail">
+              <h5>Call or WhatsApp</h5>
+              <p><a href="tel:+254110700944">+254 110 700 944</a></p>
+            </div>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="m4.2 7.2 7.8 6.1 7.8-6.1"/></svg>
+            </span>
+            <div class="contact-detail">
+              <h5>Email</h5>
+              <p><a href="mailto:caretakerskindergarten@gmail.com">caretakerskindergarten@gmail.com</a></p>
+            </div>
+          </li>
+        </ul>
+
         <div class="contact-forms">
           <form class="form-card" id="tour-form" novalidate>
-            <h3 id="tour">Book a School Tour</h3>
-            <p class="form-intro">Tours run on weekday mornings. Choose a date and time that suits you.</p>
-            <div class="form-row">
+            <div class="form-card-head">
+              <p class="form-kicker">Visit the campus</p>
+              <h3 id="tour">Book a School Tour</h3>
+              <p class="form-intro">Tours run on weekday mornings. Choose a date and time that suits you.</p>
+            </div>
+            <div class="form-card-body">
               <div class="form-group">
                 <label for="tour-parent">Your name</label>
                 <input type="text" id="tour-parent" name="parent_name" placeholder="Your full name" autocomplete="name" required>
@@ -66,30 +99,34 @@
                 <label for="tour-phone">Phone number</label>
                 <input type="tel" id="tour-phone" name="phone" placeholder="+254 ..." autocomplete="tel" required>
               </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="tour-date">Preferred date</label>
-                <input type="date" id="tour-date" name="tour_date" required>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="tour-date">Preferred date</label>
+                  <input type="date" id="tour-date" name="tour_date" required>
+                </div>
+                <div class="form-group">
+                  <label for="tour-time">Preferred time</label>
+                  <select id="tour-time" name="tour_time" required>
+                    <option value="">Select time</option>
+                    <option>8:30 AM – 10:00 AM</option>
+                    <option>10:00 AM – 11:30 AM</option>
+                  </select>
+                </div>
               </div>
               <div class="form-group">
-                <label for="tour-time">Preferred time</label>
-                <select id="tour-time" name="tour_time" required>
-                  <option value="">Select time</option>
-                  <option>8:30 AM – 10:00 AM</option>
-                  <option>10:00 AM – 11:30 AM</option>
+                <label for="tour-visitors">Number of visitors</label>
+                <select id="tour-visitors" name="visitors" required>
+                  <option value="">Select number</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4 or more</option>
                 </select>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="tour-visitors">Number of visitors</label>
-              <select id="tour-visitors" name="visitors" required>
-                <option value="">Select number</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4 or more</option>
-              </select>
+              <div class="form-group form-group-grow">
+                <label for="tour-notes">Anything we should know? <span>(optional)</span></label>
+                <textarea id="tour-notes" name="notes" placeholder="Who will be joining the tour, or any questions for us..."></textarea>
+              </div>
             </div>
             <input type="hidden" name="access_key" value="2067acbd-864c-4d5e-9318-bc15df3e7795">
             <input type="hidden" name="subject" value="New tour request from the CCE website">
@@ -97,14 +134,19 @@
             <div class="hp-field" aria-hidden="true">
               <label>Leave this field empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
             </div>
-            <button type="submit" class="submit-btn">Book tour</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <div class="form-card-foot">
+              <button type="submit" class="submit-btn">Book tour</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
           </form>
 
           <form class="form-card" id="enrol-form" novalidate>
-            <h3 id="enrol">Enrolment Form</h3>
-            <p class="form-intro">Tell us about your child and the programme you are interested in.</p>
-            <div class="form-row">
+            <div class="form-card-head">
+              <p class="form-kicker">Join the school</p>
+              <h3 id="enrol">Enrolment Form</h3>
+              <p class="form-intro">Tell us about your child and the programme you are interested in.</p>
+            </div>
+            <div class="form-card-body">
               <div class="form-group">
                 <label for="enrol-parent">Parent name</label>
                 <input type="text" id="enrol-parent" name="parent_name" placeholder="Your full name" autocomplete="name" required>
@@ -113,30 +155,30 @@
                 <label for="enrol-phone">Phone number</label>
                 <input type="tel" id="enrol-phone" name="phone" placeholder="+254 ..." autocomplete="tel" required>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="enrol-child">Child's name</label>
-              <input type="text" id="enrol-child" name="child_name" placeholder="Child's full name" required>
-            </div>
-            <div class="form-row">
               <div class="form-group">
-                <label for="enrol-age">Child's age</label>
-                <input type="text" id="enrol-age" name="child_age" placeholder="e.g. 3 years 4 months" required>
+                <label for="enrol-child">Child's name</label>
+                <input type="text" id="enrol-child" name="child_name" placeholder="Child's full name" required>
               </div>
-              <div class="form-group">
-                <label for="enrol-programme">Programme</label>
-                <select id="enrol-programme" name="programme" required>
-                  <option value="">Select programme</option>
-                  <option>Day Care (2–3 yrs)</option>
-                  <option>Pre-Primary 1 (3–4 yrs)</option>
-                  <option>Pre-Primary 2 (4–5 yrs)</option>
-                  <option>Kindergarten KG (5–6 yrs)</option>
-                </select>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="enrol-age">Child's age</label>
+                  <input type="text" id="enrol-age" name="child_age" placeholder="e.g. 3 years 4 months" required>
+                </div>
+                <div class="form-group">
+                  <label for="enrol-programme">Programme</label>
+                  <select id="enrol-programme" name="programme" required>
+                    <option value="">Select programme</option>
+                    <option>Day Care (2–3 yrs)</option>
+                    <option>Pre-Primary 1 (3–4 yrs)</option>
+                    <option>Pre-Primary 2 (4–5 yrs)</option>
+                    <option>Kindergarten KG (5–6 yrs)</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="enrol-message">Message (optional)</label>
-              <textarea id="enrol-message" name="message" placeholder="Any questions or special requirements..."></textarea>
+              <div class="form-group form-group-grow">
+                <label for="enrol-message">Message <span>(optional)</span></label>
+                <textarea id="enrol-message" name="message" placeholder="Any questions or special requirements..."></textarea>
+              </div>
             </div>
             <input type="hidden" name="access_key" value="2067acbd-864c-4d5e-9318-bc15df3e7795">
             <input type="hidden" name="subject" value="New enrolment request from the CCE website">
@@ -144,8 +186,10 @@
             <div class="hp-field" aria-hidden="true">
               <label>Leave this field empty <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"></label>
             </div>
-            <button type="submit" class="submit-btn">Submit enrolment</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
+            <div class="form-card-foot">
+              <button type="submit" class="submit-btn">Submit enrolment</button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </div>
           </form>
         </div>
       </div>

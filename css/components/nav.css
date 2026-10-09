@@ -48,14 +48,23 @@ nav {
 
 .logo-text span {
   display: block;
-  font-size: 11px;
+  font-family: var(--font-heading);
+  font-size: 14px;
   color: var(--wine);
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  font-style: italic;
   font-weight: 500;
-  margin-top: 1px;
+  font-style: normal;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  line-height: 1.4;
+  margin-top: 3px;
+  opacity: 0.95;
+  transition: color 0.25s ease;
 }
+
+.logo-wrap:hover .logo-text span {
+  color: var(--blue);
+}
+
 
 .nav-links {
   display: flex;

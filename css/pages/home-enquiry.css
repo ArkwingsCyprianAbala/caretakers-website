@@ -32,6 +32,44 @@
 .enquiry-alt a:hover {
   text-decoration: underline;
 }
+
+/* Form card and top border */
+#enquiry-form.form-card {
+  border-top: 4px solid var(--blue);
+  padding: clamp(22px, 2vw, 32px);
+  box-sizing: border-box;
+}
+
+/* Form heading spacing */
+#enquiry-form > h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Introduction spacing */
+#enquiry-form > .form-intro {
+  margin-bottom: 20px;
+}
+
+/* Centre the existing Send Enquiry button */
+#enquiry-form > .submit-btn {
+  display: block;
+  margin: 16px auto 0;
+}
+
+/* Centre the submission status message */
+#enquiry-form > .form-status {
+  width: 100%;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+/* Responsive padding on smaller screens */
+@media (max-width: 600px) {
+  #enquiry-form.form-card {
+    padding: 22px 18px;
+  }
+}
 @media (max-width: 360px) {
   .enquiry-grid {
     grid-template-columns: 1fr;

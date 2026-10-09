@@ -14,8 +14,9 @@
   box-sizing: border-box;
 }
 
-
-
+/* =========================================================
+   ABOUT: IMAGE GRID
+========================================================= */
 
 .about-visual {
   display: grid;
@@ -59,7 +60,9 @@
   transform: scale(1.04);
 }
 
-
+/* =========================================================
+   ABOUT: CONTENT
+========================================================= */
 
 .about-content {
   display: flex;
@@ -69,8 +72,14 @@
   padding-top: 0;
 }
 
+/* Match the About description font */
+#about .section-desc {
+  font-family: 'DM Sans', sans-serif;
+}
 
-
+/* =========================================================
+   ABOUT: VALUES
+========================================================= */
 
 .value-list {
   margin-top: 24px;
@@ -88,22 +97,17 @@
   margin-bottom: 0;
 }
 
-
-
-
+/* Value icons */
 .value-icon {
   width: 40px;
   height: 40px;
   min-width: 40px;
   border-radius: 10px;
   background: var(--blue-pale);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: clamp(18px, 0.8vw, 30px);
-
   flex-shrink: 0;
 }
 
@@ -111,30 +115,30 @@
   background: var(--warm-pale);
 }
 
-
-
-
+/* Value headings */
 .value-text h4 {
+  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 500;
   color: var(--dark);
-
   margin-bottom: 3px;
   margin-top: 0;
 }
 
-.value-text p {
-  font-size: 14px;
+/* Value descriptions: match the About paragraph size */
+#about .value-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: inherit;
   color: var(--muted);
   line-height: 1.55;
   margin: 0;
 }
 
-
-
+/* =========================================================
+   TABLETS AND SMALLER SCREENS
+========================================================= */
 
 @media (max-width: 768px) {
-
   .about-grid {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -163,20 +167,16 @@
     font-size: 14px;
   }
 
-  .value-text p {
-    font-size: 13px;
-  }
-
   .value-icon {
     font-size: 16px;
   }
 }
 
-
-
+/* =========================================================
+   MOBILE SCREENS
+========================================================= */
 
 @media (max-width: 600px) {
-
   .about-grid {
     padding: 0 16px;
     gap: 24px;
@@ -204,10 +204,6 @@
     font-size: 14px;
   }
 
-  .value-text p {
-    font-size: 13px;
-  }
-
   .value-icon {
     width: 36px;
     height: 36px;
@@ -216,10 +212,11 @@
   }
 }
 
-
+/* =========================================================
+   SMALL MOBILE SCREENS
+========================================================= */
 
 @media (max-width: 480px) {
-
   .about-grid {
     padding: 0 14px;
     gap: 20px;
@@ -252,10 +249,6 @@
     font-size: 13px;
   }
 
-  .value-text p {
-    font-size: 12px;
-  }
-
   .value-icon {
     width: 32px;
     height: 32px;
@@ -264,15 +257,13 @@
   }
 }
 
-
+/* =========================================================
+   LAPTOPS AND DESKTOPS
+   Keep description font size consistent across screens
+========================================================= */
 
 @media (min-width: 769px) and (max-width: 1439px) {
-
   .value-text h4 {
-    font-size: 18px;
-  }
-
-  .value-text p {
     font-size: 18px;
   }
 
@@ -281,15 +272,12 @@
   }
 }
 
-
+/* =========================================================
+   LARGE DESKTOP SCREENS
+========================================================= */
 
 @media (min-width: 1440px) and (max-width: 1919px) {
-
   .value-text h4 {
-    font-size: 21px;
-  }
-
-  .value-text p {
     font-size: 21px;
   }
 
@@ -298,15 +286,12 @@
   }
 }
 
-
+/* =========================================================
+   FULL HD SCREENS
+========================================================= */
 
 @media (min-width: 1920px) and (max-width: 2559px) {
-
   .value-text h4 {
-    font-size: 25px;
-  }
-
-  .value-text p {
     font-size: 25px;
   }
 
@@ -315,16 +300,12 @@
   }
 }
 
-
-
+/* =========================================================
+   2K AND ULTRA-WIDE SCREENS
+========================================================= */
 
 @media (min-width: 2560px) and (max-width: 3839px) {
-
   .value-text h4 {
-    font-size: 30px;
-  }
-
-  .value-text p {
     font-size: 30px;
   }
 
@@ -333,15 +314,12 @@
   }
 }
 
-
+/* =========================================================
+   4K SCREENS
+========================================================= */
 
 @media (min-width: 3840px) {
-
   .value-text h4 {
-    font-size: 36px;
-  }
-
-  .value-text p {
     font-size: 36px;
   }
 

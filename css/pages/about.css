@@ -50,6 +50,19 @@
   height: 100%;
   object-fit: cover;
 }
+.about-video-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.about-video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
 
 /* Values container */
 .about-values {

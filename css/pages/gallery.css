@@ -291,18 +291,18 @@
 
 .activity-galleries {
   width: 100%;
-  margin-top: 75px;
+  margin-top: 5px;
 }
 
 .activity-gallery {
-  padding-top: 38px;
-  margin-bottom: 55px;
+  padding-top: 8px;
+  margin-bottom: 5px;
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .activity-gallery-heading {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 
 /* Carousel wrapper */
@@ -316,13 +316,12 @@
 
 .activity-track {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   overflow-x: auto;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  padding: 4px 2px 12px;
 }
 
 .activity-track::-webkit-scrollbar {
@@ -662,3 +661,138 @@
   }
 }
 
+
+
+/* =========================================================
+   ACTIVITY GALLERIES - WIDTH ALIGNMENT
+========================================================= */
+
+#gallery .activity-galleries {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+#gallery .activity-gallery {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+#gallery .activity-carousel {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+#gallery .activity-track {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ACTIVITY GALLERY - REMOVE UNUSED HORIZONTAL SPACE
+========================================================= */
+
+#gallery .activity-track {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: stretch;
+}
+
+#gallery .activity-photo {
+  flex-grow: 1;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* Large desktop */
+@media (min-width: 1440px) {
+  #gallery .activity-track {
+    gap: 20px;
+  }
+
+  #gallery .activity-photo {
+    flex-basis: calc((100% - 60px) / 4);
+  }
+}
+
+/* Full HD */
+@media (min-width: 1920px) {
+  #gallery .activity-track {
+    gap: clamp(20px, 1.5vw, 30px);
+  }
+}
+
+/* 4K screens */
+@media (min-width: 2560px) {
+  #gallery .activity-track {
+    gap: clamp(24px, 1.5vw, 38px);
+  }
+}
+
+/* Mobile: preserve the horizontal carousel */
+@media (max-width: 767px) {
+  #gallery .activity-photo {
+    flex-grow: 0;
+    flex-basis: 82%;
+  }
+}
+
+@media (max-width: 399px) {
+  #gallery .activity-photo {
+    flex-basis: 88%;
+  }
+}
+
+
+/* =========================================================
+   ACTIVITY GALLERIES - MATCH MAIN GALLERY SIDE ALIGNMENT
+========================================================= */
+
+#gallery .activity-galleries {
+  width: calc(100% + 0px);
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+#gallery .activity-gallery {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+#gallery .activity-carousel,
+#gallery .activity-track {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   IMAGE PROTECTION
+========================================================= */
+
+#gallery img {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+/* Prevent accidental image selection */
+.gallery-item,
+.activity-photo {
+  -webkit-user-select: none;
+  user-select: none;
+}

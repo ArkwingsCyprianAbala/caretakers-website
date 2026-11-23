@@ -87,3 +87,42 @@ Object.entries(FORMS).forEach(([id, config]) => {
     }
   });
 });
+
+
+/* =========================================================
+   WEBSITE IMAGE PROTECTION
+   Caretakers' Center of Excellence
+========================================================= */
+
+// 1. Disable right-click on photographs
+document.addEventListener('contextmenu', function (e) {
+  if (e.target.closest('img')) {
+    e.preventDefault();
+  }
+});
+
+// 2. Prevent visitors from dragging photographs
+document.addEventListener('dragstart', function (e) {
+  if (e.target.closest('img')) {
+    e.preventDefault();
+  }
+});
+
+// 3. Prevent selecting photographs
+document.addEventListener('selectstart', function (e) {
+  if (e.target.closest('img')) {
+    e.preventDefault();
+  }
+});
+
+// 4. Block some common keyboard shortcuts
+document.addEventListener('keydown', function (e) {
+  const key = e.key.toLowerCase();
+
+  if (
+    (e.ctrlKey && ['s', 'u'].includes(key)) ||
+    (e.ctrlKey && e.shiftKey && ['i', 'j', 'c'].includes(key))
+  ) {
+    e.preventDefault();
+  }
+});

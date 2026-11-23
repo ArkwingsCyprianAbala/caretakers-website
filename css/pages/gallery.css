@@ -751,6 +751,23 @@
 
 
 /* =========================================================
+   MOBILE AND SMALL TABLETS: ONE ACTIVITY IMAGE
+========================================================= */
+
+@media (max-width: 767px) {
+  #gallery .activity-track {
+    gap: 0;
+  }
+
+  #gallery .activity-photo {
+    flex: 0 0 100% !important;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* =========================================================
    ACTIVITY GALLERIES - MATCH MAIN GALLERY SIDE ALIGNMENT
 ========================================================= */
 
@@ -796,3 +813,4 @@
   -webkit-user-select: none;
   user-select: none;
 }
+
